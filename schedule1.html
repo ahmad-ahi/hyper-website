@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ahmad's schedule</title>
+        <li><a href="/fun">Currency Converter</a></li>
+        <br>
+        <li><a href="/">Home</a></li>
+        
+        <style>
+            body {
+                background-color: LightBlue;
+                font-family: Helvetica;
+            }
+    
+            .header {
+                background-color: OliveDrab;
+                color: white;
+                text-align: center;
+            }
+    
+            .odd-row {
+                background-color: SandyBrown;
+            }
+    
+            .even-row {
+                background-color: IndianRed;
+            }
+    
+            table {
+                width: 100%;
+                font-family: Helvetica;
+            }
+        </style>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <p>Below you can find my daily routine.</p>
+        <h1>Table of daily things</h1>
+        <table border="5">
+            <tr class="header">
+                <th><strong><em>Sunday</em></strong></th>
+                <th><strong><em>Monday</em></strong></th>
+                <th><strong><em>Tuesday</em></strong></th>
+                <th><strong><em>Wednesday</em></strong></th>
+                <th><strong><em>Thursday</em></strong></th>
+                <th><strong><em>Friday</em></strong></th>
+                <th><strong><em>Saturday</em></strong></th>
+            </tr>
+            <tr class="odd-row">
+                <td>Planning day</td>
+                <td>Computer Science 1</td>
+                <td>Computer Science 1</td>
+                <td>Computer Science 1</td>
+                <td>Work on project</td>
+                <td>Computer Science 1</td>
+                <td>Planning day</td>
+            </tr>
+            <tr class="even-row">
+                <td>Track and Field</td>
+                <td>Calculus 1</td>
+                <td>Calculus 1</td>
+                <td>Calculus 1</td>
+                <td>FYE</td>
+                <td>Calculus 1</td>
+                <td>GYM</td>
+            </tr>
+            <tr class="odd-row">
+                <td>Homework</td>
+                <td>American Politics</td>
+                <td>American Politics</td>
+                <td>American Politics</td>
+                <td>Track and Field</td>
+                <td>American Politics</td>
+                <td>Homework</td>
+            </tr>
+            <tr class="even-row">
+                <td>Homework</td>
+                <td>Writing 1</td>
+                <td>Writing 1</td>
+                <td>Writing 1</td>
+                <td>Track and Field</td>
+                <td>Writing 1</td>
+                <td>Prepare for exams</td>
+            </tr>
+        </table>
+        <h1>Currency Converter</h1>
+        <form action="/schedule1" method="post">
+            <label for="amount">Enter amount in USD:</label><br>
+            <input type="text" id="amount" name="amount"><br><br>
+    
+            <label for="currency">Select currency to convert to:</label><br>
+            <select id="currency" name="currency">
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Great British Pound (GBP)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="CNY">Chinese Yen (CNY)</option>
+            </select><br><br>
+    
+            <input type="submit" value="Convert">
+        </form>
+
+        
+    </body>
+</html>
+    

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ahmad's schedule</title>
+    <li><a href="/">Home</a></li>
+    <br>
+    <li><a href="/schedule1">My Schedule</a></li>
+    
+
+    <style>
+        img {
+            height: 300px;
+        }
+
+        img.filtered-image {
+            animation: brightnessFilter 8s forwards;
+        }
+
+        @keyframes brightnessFilter {
+            from {
+                filter: brightness(0%);
+                height: 200px;
+                width: 200px;
+            }
+
+            to {
+                filter: brightness(100%);
+                width: 450px;
+                height: 400px;
+            }
+        }
+
+        body {
+            background-color: LightBlue;
+            font-family: Helvetica;
+        }
+
+        {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .containerTab {
+            padding: 20px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div style="text-align:center">
+        <h2>Fun page</h2>
+        <p>Click on the boxes below:</p>
+    </div>
+
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:green;">
+            Fun fact about Alfred University
+        </div>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;background:green">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Fun fact about Alfred University</h2>
+        <p>In its 2022 College Guide and Rankings report, Washington Monthly ranks Alfred University among top colleges and universities offering master's degree programs, earning national recognition.</p>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+    <h2>A picture of Alfred University</h2>
+    <img class="filtered-image" src="https://www.alfred.edu/_images/brandpillar11.jpg">
+
+    <h1>Simple Calculator</h1>
+    <form action="/fun" method="post">
+        <label for="num1">Enter first number:</label><br>
+        <input type="number" id="num1" name="num1"><br>
+        <label for="num2">Enter second number:</label><br>
+        <input type="number" id="num2" name="num2"><br><br>
+        
+        <label for="operation">Select operation:</label><br>
+        <select id="operation" name="operation">
+            <option value="add">Addition (+)</option>
+            <option value="subtract">Subtraction (-)</option>
+            <option value="multiply">Multiplication (*)</option>
+            <option value="divide">Division (/)</option>
+        </select><br><br>
+        
+        <input type="submit" value="Calculate">
+    </form>
+
+
+
+
+</body>
+</html>
